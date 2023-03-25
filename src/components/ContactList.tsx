@@ -5,7 +5,7 @@ import ContactCard from "./ContactCard";
 function ContactList() {
   return (
     
-    <div className="space-y-4">
+    <div className="space-y-4 overflow-y-scroll h-3/5">
       {Contacts.map((contact: Contact) => (
           <ContactCard
             name={contact.name}
