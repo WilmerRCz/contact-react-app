@@ -42,7 +42,7 @@ export const Contacts = [
     dataCustomField: "No se xd",
   },
   {
-    id: 1,
+    id: 4,
     name: "Wilmer",
     lastname: "Rodriguez",
     birth: "08/03/1999",
@@ -56,7 +56,7 @@ export const Contacts = [
     dataCustomField: "No se xd",
   },
   {
-    id: 2,
+    id: 5,
     name: "Wilmer",
     lastname: "Rodriguez",
     birth: "08/03/1999",
@@ -70,7 +70,7 @@ export const Contacts = [
     dataCustomField: "No se xd",
   },
   {
-    id: 3,
+    id: 6,
     name: "Wilmer",
     lastname: "Rodriguez",
     birth: "08/03/1999",
@@ -84,7 +84,7 @@ export const Contacts = [
     dataCustomField: "No se xd",
   },
   {
-    id: 1,
+    id: 7,
     name: "Wilmer",
     lastname: "Rodriguez",
     birth: "08/03/1999",
@@ -98,7 +98,7 @@ export const Contacts = [
     dataCustomField: "No se xd",
   },
   {
-    id: 2,
+    id: 8,
     name: "Wilmer",
     lastname: "Rodriguez",
     birth: "08/03/1999",
@@ -112,7 +112,7 @@ export const Contacts = [
     dataCustomField: "No se xd",
   },
   {
-    id: 3,
+    id: 9,
     name: "Wilmer",
     lastname: "Rodriguez",
     birth: "08/03/1999",

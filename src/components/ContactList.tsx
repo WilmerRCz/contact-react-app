@@ -8,6 +8,7 @@ function ContactList() {
     <div className="space-y-4 overflow-y-scroll h-3/5">
       {Contacts.map((contact: Contact) => (
           <ContactCard
+            key={contact.id}
             name={contact.name}
             lastname={contact.lastname}
             phone={contact.phone}
