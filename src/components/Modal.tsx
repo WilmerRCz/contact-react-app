@@ -1,4 +1,5 @@
 import { GrClose } from "react-icons/gr";
+import { Contact } from "../@types/Contact";
 import ButtonLayout from "./ButtonLayout";
 import ButtonCreateContact from "./ButtonLayout";
 import FormContact from "./FormContact";
@@ -7,9 +8,10 @@ interface Props {
   open: boolean;
   closeModal: () => void;
   title: string;
+  children: React.ReactNode
 }
 
-function Modal({ open, closeModal, title }: Props) {
+function Modal({ open, closeModal, title, children }: Props) {
   return open ? (
     <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
       <div className="w-[700px]">
@@ -30,11 +32,11 @@ function Modal({ open, closeModal, title }: Props) {
                 borderColor="border-green-700"
                 backgroundColor="bg-green-500"
                 type="submit"
-                idForm="formNewContact"
+                idForm="formContact"
               />
             </div>
           </div>
-          <FormContact />
+          {children}
         </div>
       </div>
     </div>

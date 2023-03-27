@@ -1,6 +1,7 @@
 import { BiPlusCircle } from "react-icons/bi";
 import Modal from "./Modal";
 import useModal from "../hooks/useModal";
+import FormContact from "./FormContact";
 
 function ButtonNewContact() {
   const { showModal, open, closeModal } = useModal();
@@ -12,7 +13,9 @@ function ButtonNewContact() {
       >
         <BiPlusCircle size={24} color={"#4ade80"} />
       </button>
-      <Modal open={open} closeModal={closeModal} title={"Crear contacto nuevo"}/>
+      <Modal open={open} closeModal={closeModal} title={"Crear contacto nuevo"}>
+        <FormContact />
+      </Modal>
     </div>
   );
 }

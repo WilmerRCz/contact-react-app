@@ -15,7 +15,7 @@ export const Contacts = [
   },
   {
     id: 2,
-    name: "Wilmer",
+    name: "Richard",
     lastname: "Rodriguez",
     birth: "08/03/1999",
     phone: 987658789,
@@ -113,8 +113,8 @@ export const Contacts = [
   },
   {
     id: 9,
-    name: "Wilmer",
-    lastname: "Rodriguez",
+    name: "Boris",
+    lastname: "Belmar",
     birth: "08/03/1999",
     phone: 987658789,
     image: "",

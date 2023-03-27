@@ -4,6 +4,7 @@ interface Props<T extends FieldValues> {
   name: Path<T>;
   type: string;
   setNumber?: boolean;
+  defaultValue?: string | number
   register: UseFormRegister<T>
   errorMessage?: string;
 }
@@ -13,6 +14,7 @@ function InputLayout<T extends FieldValues>({
   type,
   setNumber,
   register,
+  defaultValue,
   errorMessage,
 }: Props<T>) {
   return (
@@ -24,6 +26,7 @@ function InputLayout<T extends FieldValues>({
         type={type}
         id={name}
         className={"rounded-md w-full px-1"}
+        defaultValue={defaultValue}
         {...register(name, { valueAsNumber: setNumber })}
       />
       {errorMessage && (

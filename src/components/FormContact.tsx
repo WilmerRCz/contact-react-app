@@ -1,17 +1,23 @@
 import React from "react";
+import { Contact } from "../@types/Contact";
 import useContactForm from "../hooks/useContactForm";
 import InputLayout from "./InputLayout";
 
-function FormContact() {
+interface Props {
+  data?: Contact
+}
+
+function FormContact({ data }: Props) {
   const { register, onSubmit, handleSubmit, errors } = useContactForm();
   return (
-    <form id="formNewContact" onSubmit={handleSubmit(onSubmit) }>
+    <form id="formContact" onSubmit={handleSubmit(onSubmit) }>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <InputLayout
           label="Nombre: "
           name="name"
           register={register}
           type="text"
+          defaultValue={data?.name}
           errorMessage={errors.name?.message}
         />
         <InputLayout
@@ -19,6 +25,7 @@ function FormContact() {
           name="lastname"
           register={register}
           type="text"
+          defaultValue={data?.lastname}
           errorMessage={errors.lastname?.message}
         />
         <InputLayout
@@ -26,6 +33,7 @@ function FormContact() {
           name="birth"
           register={register}
           type="date"
+          defaultValue={data?.birth}
           errorMessage={errors.birth?.message}
         />
         <InputLayout
@@ -34,6 +42,7 @@ function FormContact() {
           register={register}
           setNumber={true}
           type="number"
+          defaultValue={data?.phone}
           errorMessage={errors.phone?.message}
         />
         <InputLayout
@@ -41,6 +50,7 @@ function FormContact() {
           name="image"
           register={register}
           type="text"
+          defaultValue={data?.image}
           errorMessage={errors.image?.message}
         />
         <InputLayout
@@ -48,6 +58,7 @@ function FormContact() {
           name="email"
           register={register}
           type="text"
+          defaultValue={data?.email}
           errorMessage={errors.email?.message}
         />
         <InputLayout
@@ -55,6 +66,7 @@ function FormContact() {
           name="company"
           register={register}
           type="text"
+          defaultValue={data?.company}
           errorMessage={errors.company?.message}
         />
         <InputLayout
@@ -62,6 +74,7 @@ function FormContact() {
           name="address"
           register={register}
           type="text"
+          defaultValue={data?.address}
           errorMessage={errors.address?.message}
         />
         <InputLayout
@@ -69,6 +82,7 @@ function FormContact() {
           name="website"
           register={register}
           type="text"
+          defaultValue={data?.website}
           errorMessage={errors.website?.message}
         />
         <InputLayout
@@ -76,6 +90,7 @@ function FormContact() {
           name="customField"
           register={register}
           type="text"
+          defaultValue={data?.customField}
           errorMessage={errors.customField?.message}
         />
         <InputLayout
@@ -83,6 +98,7 @@ function FormContact() {
           name="dataCustomField"
           register={register}
           type="text"
+          defaultValue={data?.dataCustomField}
           errorMessage={errors.dataCustomField?.message}
         />
       </div>
