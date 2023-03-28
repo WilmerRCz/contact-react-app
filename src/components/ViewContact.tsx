@@ -6,16 +6,13 @@ interface Props {
 function ViewContact({ data }: Props) {
   return (
     <div>
-      <div className="h-80vh bg-gray-200 rounded-lg overflow-hidden">
-        <div className="h-full">
+      <div className="w-3/5 mx-auto bg-gray-200 rounded-lg overflow-hidden">
           <img
-            src="https://www.sac.org.ar/wp-content/uploads/2020/12/logo-25x25-1.png"
+            className="object-center object-contain w-full h-full"
+            src="https://i.pinimg.com/originals/53/21/42/532142363815884a29c83fd89632b906.jpg "
             alt="imagen de contacto"
-            className=""
           />
-        </div>
       </div>
-
       <div>
         <h1 className="font-semibold text-gray-300 text-3xl">{`${data?.name} ${data?.lastname}`}</h1>
       </div>
