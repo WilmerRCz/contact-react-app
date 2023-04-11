@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-export default function useModal(){
+export default function useModal () {
   const [open, setOpen] = useState(false)
 
   const showModal = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const closeModal = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return {
     open,

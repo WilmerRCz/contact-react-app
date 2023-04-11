@@ -1,9 +1,9 @@
-import { Contact } from "../@types/Contact";
+import { Contact } from '../@types/Contact'
 
 interface Props {
   data?: Contact;
 }
-function ViewContact({ data }: Props) {
+function ViewContact ({ data }: Props) {
   return (
     <div>
       <div className="w-3/5 mx-auto bg-gray-200 rounded-lg overflow-hidden">
@@ -17,7 +17,7 @@ function ViewContact({ data }: Props) {
         <h1 className="font-semibold text-gray-300 text-3xl">{`${data?.name} ${data?.lastname}`}</h1>
       </div>
     </div>
-  );
+  )
 }
 
-export default ViewContact;
+export default ViewContact

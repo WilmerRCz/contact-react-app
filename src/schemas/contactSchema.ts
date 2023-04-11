@@ -1,4 +1,4 @@
-import * as Yup from "yup";
+import * as Yup from 'yup'
 
 export const contactSchema = Yup.object({
   name: Yup.string().max(60).required(),
@@ -11,5 +11,5 @@ export const contactSchema = Yup.object({
   address: Yup.string().max(60).optional().notRequired(),
   website: Yup.string().max(60).optional().notRequired(),
   customField: Yup.string().max(60).optional().notRequired(),
-  dataCustomField: Yup.string().max(60).optional().notRequired(),
+  dataCustomField: Yup.string().max(60).optional().notRequired()
 })

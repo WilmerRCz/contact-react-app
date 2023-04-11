@@ -1,14 +1,13 @@
-import React from "react";
-import { Contact } from "../@types/Contact";
-import useContactForm from "../hooks/useContactForm";
-import InputLayout from "./InputLayout";
+import { Contact } from '../@types/Contact'
+import useContactForm from '../hooks/useContactForm'
+import InputLayout from './InputLayout'
 
 interface Props {
   data?: Contact
 }
 
-function FormContact({ data }: Props) {
-  const { register, onSubmit, handleSubmit, errors } = useContactForm();
+function FormContact ({ data }: Props) {
+  const { register, onSubmit, handleSubmit, errors } = useContactForm()
   return (
     <form id="formContact" onSubmit={handleSubmit(onSubmit) }>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -103,7 +102,7 @@ function FormContact({ data }: Props) {
         />
       </div>
     </form>
-  );
+  )
 }
 
-export default FormContact;
+export default FormContact

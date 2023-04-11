@@ -1,7 +1,6 @@
-import React from 'react'
 import ContactApp from './components/screens/ContactApp'
 
-function App() {
+function App () {
   return (
     <div>
       <ContactApp/>

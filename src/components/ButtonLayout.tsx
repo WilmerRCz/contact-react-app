@@ -5,10 +5,10 @@ interface Props {
   borderColor?: string,
   backgroundColor?: string
   onClick?: () => void
-  type?: "button" | "submit" | "reset" | undefined
+  type?: 'button' | 'submit' | 'reset' | undefined
   idForm?: string
 }
-function ButtonLayout({title,borderColor, backgroundColor,type,idForm, onClick}:Props) {
+function ButtonLayout ({ title, borderColor, backgroundColor, type, idForm, onClick }:Props) {
   return (
     <div>
       <button className={`py-1 px-2 border-2 ${borderColor} ${backgroundColor} rounded-md text-white hover:bg-opacity-90`}

@@ -1,11 +1,11 @@
-import ContactData from "./ContactData";
-import DeleteButton from "./ButtonDeleteContact";
-import EditButton from "./ButtonEditContact";
-import ImageContact from "./ImageContact";
-import { Contact } from "../@types/Contact";
-import useModal from "../hooks/useModal";
-import Modal from "./Modal";
-import ViewContact from './ViewContact';
+import ContactData from './ContactData'
+import DeleteButton from './ButtonDeleteContact'
+import EditButton from './ButtonEditContact'
+import ImageContact from './ImageContact'
+import { Contact } from '../@types/Contact'
+import useModal from '../hooks/useModal'
+import Modal from './Modal'
+import ViewContact from './ViewContact'
 
 interface Props {
   name: string;
@@ -15,8 +15,8 @@ interface Props {
   email?: string;
   data?: Contact
 }
-function ContactCard({ name, lastname, phone, email, birth, data }: Props) {
-  const {open, closeModal, showModal} = useModal()
+function ContactCard ({ name, lastname, phone, email, birth, data }: Props) {
+  const { open, closeModal, showModal } = useModal()
   return (
     <div>
       <div className="bg-slate-700 h-full w-80 sm:w-96 rounded p-2 flex items-center space-x-6">
@@ -42,7 +42,7 @@ function ContactCard({ name, lastname, phone, email, birth, data }: Props) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ContactCard;
+export default ContactCard
