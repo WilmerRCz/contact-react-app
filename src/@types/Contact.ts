@@ -12,3 +12,7 @@ export interface Contact {
   customField?: string,
   dataCustomField?: string
 }
+
+export type CreateContactPayload = Omit<Contact, 'id'>
+
+export type UpdateContactPayload = Partial<CreateContactPayload>

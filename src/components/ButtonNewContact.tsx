@@ -8,7 +8,7 @@ function ButtonNewContact () {
   return (
     <div>
       <button
-        className="m-2 p-2 w-80 sm:w-96 bg-slate-800 rounded flex justify-center items-center"
+        className="p-2 w-80 sm:w-96 bg-slate-800 rounded flex justify-center items-center"
         onClick={showModal}
       >
         <BiPlusCircle size={24} color={'#4ade80'} />

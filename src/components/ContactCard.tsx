@@ -19,7 +19,7 @@ function ContactCard ({ name, lastname, phone, email, birth, data }: Props) {
   const { open, closeModal, showModal } = useModal()
   return (
     <div>
-      <div className="bg-slate-700 h-full w-80 sm:w-96 rounded p-2 flex items-center space-x-6">
+      <div className="bg-slate-700 h-full w-80 sm:w-96 rounded-xl p-2 flex items-center space-x-6">
         <div className="w-20">
           <ImageContact />
         </div>

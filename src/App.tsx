@@ -1,9 +1,11 @@
-import ContactApp from './components/screens/ContactApp'
+import { Toaster } from 'react-hot-toast'
+import Router from './Router'
 
 function App () {
   return (
     <div>
-      <ContactApp/>
+      <Router/>
+      <Toaster/>
     </div>
   )
 }
