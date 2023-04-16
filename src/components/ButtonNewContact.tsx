@@ -1,13 +1,13 @@
 import { BiPlusCircle } from 'react-icons/bi'
 import Modal from './Modal'
 import useModal from '../hooks/useModal'
-import FormContact from './FormContact'
+import FormCreateContact from './screens/ContactApp/components/FormCreateContact'
 
 interface Props {
-  refetchContacts: () => void
+  refecthContacts: () => void
 }
 
-function ButtonNewContact ({ refetchContacts }:Props) {
+function ButtonNewContact ({ refecthContacts }: Props) {
   const { showModal, open, closeModal } = useModal()
   return (
     <div>
@@ -17,8 +17,8 @@ function ButtonNewContact ({ refetchContacts }:Props) {
       >
         <BiPlusCircle size={24} color={'#4ade80'} />
       </button>
-      <Modal open={open} closeModal={closeModal} title={'Crear contacto nuevo'}>
-        <FormContact refetchContacts={refetchContacts}/>
+      <Modal open={open} closeModal={closeModal} title={'Crear contacto nuevo'} idForm={'formCreateContact'}>
+        <FormCreateContact refecthContacts={refecthContacts}/>
       </Modal>
     </div>
   )

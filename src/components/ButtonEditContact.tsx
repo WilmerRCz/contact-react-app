@@ -1,8 +1,8 @@
 import { BiEdit } from 'react-icons/bi'
 import { Contact } from '../@types/Contact'
 import useModal from '../hooks/useModal'
-import FormContact from './FormContact'
 import Modal from './Modal'
+import FormEditContact from './screens/ContactApp/components/FormEditContact'
 
 interface Props {
   data?: Contact;
@@ -19,8 +19,9 @@ function EditButton ({ data }: Props) {
         open={open}
         closeModal={closeModal}
         title={'Editar Contacto'}
+        idForm={'formEditContact'}
       >
-        <FormContact data={data} />
+        <FormEditContact data={data} />
       </Modal>
     </div>
   )

@@ -28,12 +28,12 @@ const getContactService = (token?: string) => {
   }
 
   const update = async (id: string, payload: UpdateContactPayload): Promise<Contact> => {
-    const { data } = await getContactClient(token).post(`/${id}`, payload)
+    const { data } = await getContactClient(token).put(`/${id}`, payload)
     return data
   }
 
   const remove = async (id: string): Promise<void> => {
-    const { data } = await getContactClient(token).post(`/${id}`)
+    const { data } = await getContactClient(token).delete(`/${id}`)
     return data
   }
 

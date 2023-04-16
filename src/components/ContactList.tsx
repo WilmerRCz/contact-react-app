@@ -3,12 +3,13 @@ import ContactCard from './ContactCard'
 
 interface Props {
   contact?: Contact[]
+  refecthContacts: () => void
 }
 
-function ContactList ({ contact }: Props) {
+function ContactList ({ contact, refecthContacts }: Props) {
   return (
     <div className="space-y-4 overflow-y-scroll h-3/5">
-      {contact?.reverse().sort((a: Contact, b: Contact) => b.id - a.id).map((contact: Contact) => (
+      {contact?.map((contact: Contact) => (
           <ContactCard
             key={contact.id}
             name={contact.firstName}
@@ -17,6 +18,7 @@ function ContactList ({ contact }: Props) {
             email={contact.email}
             birth={contact.birth}
             data={contact}
+            refecthContacts={refecthContacts}
           />
       ))}
     </div>

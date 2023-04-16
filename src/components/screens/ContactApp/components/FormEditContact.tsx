@@ -1,16 +1,15 @@
-import { Contact } from '../@types/Contact'
-import useContactForm from '../hooks/useContactForm'
-import InputLayout from './InputLayout'
+import { Contact } from '../../../../@types/Contact'
+import useEditContactForm from '../../../../hooks/useEditContactForm'
+import InputLayout from '../../../InputLayout'
 
 interface Props {
-  data?: Contact,
-  refetchContacts: () => void
+  data?: Contact
 }
 
-function FormContact ({ data, refetchContacts }: Props) {
-  const { register, onSubmit, handleSubmit, errors } = useContactForm( refetchContacts )
+function FormEditContact ({ data }: Props) {
+  const { register, onSubmit, handleSubmit, errors } = useEditContactForm()
   return (
-    <form id="formContact" onSubmit={handleSubmit(onSubmit) }>
+    <form id="formEditContact" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <InputLayout
           label="Nombre: "
@@ -106,4 +105,4 @@ function FormContact ({ data, refetchContacts }: Props) {
   )
 }
 
-export default FormContact
+export default FormEditContact

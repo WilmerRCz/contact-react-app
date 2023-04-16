@@ -10,8 +10,8 @@ function ContactApp () {
   return (
     <Container>
       <TitleSection title='Contact App'/>
-      <ButtonNewContact refetchContacts={refetch}/>
-      <ContactList contact={contacts}/>
+      <ButtonNewContact refecthContacts={refetch}/>
+      <ContactList contact={contacts} refecthContacts={refetch}/>
       <ButtonLogout/>
     </Container>
   )
