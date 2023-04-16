@@ -3,7 +3,11 @@ import Modal from './Modal'
 import useModal from '../hooks/useModal'
 import FormContact from './FormContact'
 
-function ButtonNewContact () {
+interface Props {
+  refetchContacts: () => void
+}
+
+function ButtonNewContact ({ refetchContacts }:Props) {
   const { showModal, open, closeModal } = useModal()
   return (
     <div>
@@ -14,7 +18,7 @@ function ButtonNewContact () {
         <BiPlusCircle size={24} color={'#4ade80'} />
       </button>
       <Modal open={open} closeModal={closeModal} title={'Crear contacto nuevo'}>
-        <FormContact />
+        <FormContact refetchContacts={refetchContacts}/>
       </Modal>
     </div>
   )

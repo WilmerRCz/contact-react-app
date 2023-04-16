@@ -3,29 +3,30 @@ import useContactForm from '../hooks/useContactForm'
 import InputLayout from './InputLayout'
 
 interface Props {
-  data?: Contact
+  data?: Contact,
+  refetchContacts: () => void
 }
 
-function FormContact ({ data }: Props) {
-  const { register, onSubmit, handleSubmit, errors } = useContactForm()
+function FormContact ({ data, refetchContacts }: Props) {
+  const { register, onSubmit, handleSubmit, errors } = useContactForm( refetchContacts )
   return (
     <form id="formContact" onSubmit={handleSubmit(onSubmit) }>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <InputLayout
           label="Nombre: "
-          name="name"
+          name="firstName"
           register={register}
           type="text"
-          defaultValue={data?.name}
-          errorMessage={errors.name?.message}
+          defaultValue={data?.firstName}
+          errorMessage={errors.firstName?.message}
         />
         <InputLayout
           label="Apellido: "
-          name="lastname"
+          name="lastName"
           register={register}
           type="text"
-          defaultValue={data?.lastname}
-          errorMessage={errors.lastname?.message}
+          defaultValue={data?.lastName}
+          errorMessage={errors.lastName?.message}
         />
         <InputLayout
           label="Cumpleaños: "

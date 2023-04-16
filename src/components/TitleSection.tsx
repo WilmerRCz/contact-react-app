@@ -5,9 +5,9 @@ interface Props {
 }
 function TitleSection ({ title }: Props) {
   return (
-    <h1 className="font-bold text-4xl text-black dark:text-white flex justify-center items-center">
-    {title}
-  </h1>
+    <h1 className="font-bold text-4xl text-black dark:text-white flex justify-center items-center text-center">
+      {title}
+    </h1>
   )
 }
 
