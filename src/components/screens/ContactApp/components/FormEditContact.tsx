@@ -39,7 +39,6 @@ function FormEditContact ({ data }: Props) {
           label="Celular: "
           name="phone"
           register={register}
-          setNumber={true}
           type="number"
           defaultValue={data?.phone}
           errorMessage={errors.phone?.message}

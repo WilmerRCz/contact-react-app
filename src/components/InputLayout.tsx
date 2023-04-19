@@ -3,7 +3,6 @@ interface Props<T extends FieldValues> {
   label: string;
   name: Path<T>;
   type: string;
-  setNumber?: boolean;
   defaultValue?: string | number
   register: UseFormRegister<T>
   errorMessage?: string;
@@ -12,7 +11,6 @@ function InputLayout<T extends FieldValues> ({
   label,
   name,
   type,
-  setNumber,
   register,
   defaultValue,
   errorMessage
@@ -27,7 +25,7 @@ function InputLayout<T extends FieldValues> ({
         id={name}
         className={'rounded-md w-full px-1'}
         defaultValue={defaultValue}
-        {...register(name, { valueAsNumber: setNumber })}
+        {...register(name)}
       />
       {errorMessage && (
         <span className="text-xs text-red-500 mt-1">{errorMessage}</span>

@@ -4,7 +4,7 @@ export interface Contact {
   lastName: string,
   image?: string,
   birth?: string,
-  phone?: number,
+  phone?: string,
   email?: string,
   company?: string,
   address?: string,

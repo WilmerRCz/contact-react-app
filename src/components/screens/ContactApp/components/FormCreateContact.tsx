@@ -1,14 +1,12 @@
 import useCreateContactForm from '../hooks/useCreateContactForm'
 import InputLayout from '../../../InputLayout'
-import useCreateContact from '../hooks/useCreateContact'
 
 interface Props {
   refecthContacts: () => void
 }
 
 function FormCreateContact ({ refecthContacts }:Props) {
-  const { handleContactSubmit } = useCreateContact(refecthContacts)
-  const { register, handleSubmit, errors } = useCreateContactForm(handleContactSubmit)
+  const { register, handleSubmit, errors } = useCreateContactForm(refecthContacts)
   return (
     <form id="formCreateContact" onSubmit={handleSubmit}>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -37,7 +35,6 @@ function FormCreateContact ({ refecthContacts }:Props) {
           label="Celular: "
           name="phone"
           register={register}
-          setNumber={true}
           type="number"
           errorMessage={errors.phone?.message}
         />
