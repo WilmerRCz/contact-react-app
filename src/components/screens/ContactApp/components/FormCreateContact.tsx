@@ -3,10 +3,11 @@ import InputLayout from '../../../InputLayout'
 
 interface Props {
   refecthContacts: () => void
+  closeModal: () => void
 }
 
-function FormCreateContact ({ refecthContacts }:Props) {
-  const { register, handleSubmit, errors } = useCreateContactForm(refecthContacts)
+function FormCreateContact ({ refecthContacts, closeModal }:Props) {
+  const { register, handleSubmit, errors } = useCreateContactForm(refecthContacts, closeModal)
   return (
     <form id="formCreateContact" onSubmit={handleSubmit}>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

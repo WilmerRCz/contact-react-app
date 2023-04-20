@@ -5,10 +5,11 @@ import Modal from './Modal'
 import FormEditContact from './screens/ContactApp/components/FormEditContact'
 
 interface Props {
-  data?: Contact;
+  data?: Contact
+  refecthContacts: () => void
 }
 
-function EditButton ({ data }: Props) {
+function EditButton ({ data, refecthContacts }: Props) {
   const { showModal, open, closeModal } = useModal()
   return (
     <div className="ml-auto">
@@ -21,7 +22,7 @@ function EditButton ({ data }: Props) {
         title={'Editar Contacto'}
         idForm={'formEditContact'}
       >
-        <FormEditContact data={data} />
+        <FormEditContact data={data} closeModal={closeModal} refecthContacts={refecthContacts}/>
       </Modal>
     </div>
   )

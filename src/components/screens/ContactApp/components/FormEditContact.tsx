@@ -1,13 +1,15 @@
 import { Contact } from '../../../../@types/Contact'
-import useEditContactForm from '../../../../hooks/useEditContactForm'
+import useEditContactForm from '../hooks/useEditContactForm'
 import InputLayout from '../../../InputLayout'
 
 interface Props {
   data?: Contact
+  refecthContacts: () => void
+  closeModal: () => void
 }
 
-function FormEditContact ({ data }: Props) {
-  const { register, onSubmit, handleSubmit, errors } = useEditContactForm()
+function FormEditContact ({ data, refecthContacts, closeModal }: Props) {
+  const { register, onSubmit, handleSubmit, errors } = useEditContactForm(data?.id, refecthContacts, closeModal)
   return (
     <form id="formEditContact" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

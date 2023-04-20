@@ -11,7 +11,7 @@ interface Props {
   name: string;
   lastname: string;
   birth?: string;
-  phone?: number;
+  phone?: string;
   email?: string;
   data: Contact
   refecthContacts: () => void
@@ -34,7 +34,7 @@ function ContactCard ({ name, lastname, phone, email, birth, data, refecthContac
             onClick={showModal}
           />
           <div className="space-y-4 m-2">
-            <EditButton data={data}/>
+            <EditButton data={data} refecthContacts={refecthContacts}/>
             <DeleteButton data={data} refecthContacts={refecthContacts}/>
           </div>
           <Modal open={open} closeModal={closeModal} title={'Contacto'}>

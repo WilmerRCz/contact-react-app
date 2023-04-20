@@ -18,7 +18,7 @@ function ButtonNewContact ({ refecthContacts }: Props) {
         <BiPlusCircle size={24} color={'#4ade80'} />
       </button>
       <Modal open={open} closeModal={closeModal} title={'Crear contacto nuevo'} idForm={'formCreateContact'}>
-        <FormCreateContact refecthContacts={refecthContacts}/>
+        <FormCreateContact refecthContacts={refecthContacts} closeModal={closeModal}/>
       </Modal>
     </div>
   )

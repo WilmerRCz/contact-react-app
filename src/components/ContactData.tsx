@@ -2,7 +2,7 @@ interface Props {
   name: string;
   lastname: string;
   birth?: string;
-  phone?: number;
+  phone?: string;
   email?: string;
   onClick?: () => void
 }

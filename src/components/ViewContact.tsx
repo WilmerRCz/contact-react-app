@@ -14,7 +14,7 @@ function ViewContact ({ data }: Props) {
           />
       </div>
       <div>
-        <h1 className="font-semibold text-gray-300 text-3xl">{`${data?.name} ${data?.lastname}`}</h1>
+        <h1 className="font-semibold text-gray-300 text-3xl">{`${data?.firstName} ${data?.lastName}`}</h1>
       </div>
     </div>
   )

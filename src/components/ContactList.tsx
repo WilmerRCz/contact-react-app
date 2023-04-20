@@ -9,7 +9,7 @@ interface Props {
 function ContactList ({ contact, refecthContacts }: Props) {
   return (
     <div className="space-y-4 overflow-y-scroll h-3/5">
-      {contact?.map((contact: Contact) => (
+      {contact?.slice().reverse().map((contact: Contact) => (
           <ContactCard
             key={contact.id}
             name={contact.firstName}
