@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { Contact, CreateContactPayload, UpdateContactPayload } from '../@types/Contact'
+import envs from '../config/envs'
 
-const baseURL = 'http://localhost:4000/v1/contacts'
+const baseURL = `${envs.API_BASE_URL}/v1/contacts`
 
 const getContactClient = (token?: string) => axios.create({
   baseURL,

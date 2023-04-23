@@ -1,7 +1,7 @@
 import { BiPlusCircle } from 'react-icons/bi'
 import Modal from './Modal'
-import useModal from '../hooks/useModal'
-import FormCreateContact from './screens/ContactApp/components/FormCreateContact'
+import useModal from '../../../../hooks/useModal'
+import FormCreateContact from './FormCreateContact'
 
 interface Props {
   refecthContacts: () => void

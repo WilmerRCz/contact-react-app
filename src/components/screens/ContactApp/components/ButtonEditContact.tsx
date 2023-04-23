@@ -1,8 +1,9 @@
 import { BiEdit } from 'react-icons/bi'
-import { Contact } from '../@types/Contact'
-import useModal from '../hooks/useModal'
+
 import Modal from './Modal'
-import FormEditContact from './screens/ContactApp/components/FormEditContact'
+import { Contact } from '../../../../@types/Contact'
+import useModal from '../../../../hooks/useModal'
+import FormEditContact from './FormEditContact'
 
 interface Props {
   data?: Contact
