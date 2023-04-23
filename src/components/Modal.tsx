@@ -6,9 +6,10 @@ interface Props {
   title: string;
   children: React.ReactNode
   idForm?: string
+  dotShowSaveButton?: boolean
 }
 
-function Modal ({ open, closeModal, title, idForm, children }: Props) {
+function Modal ({ open, closeModal, title, idForm, dotShowSaveButton, children }: Props) {
   return open
     ? (
         <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
@@ -25,13 +26,16 @@ function Modal ({ open, closeModal, title, idForm, children }: Props) {
                     backgroundColor="bg-red-500"
                     onClick={closeModal}
                   />
-                  <ButtonLayout
+                  {dotShowSaveButton
+                    ? null
+                    : <ButtonLayout
                     title="Crear"
                     borderColor="border-green-700"
                     backgroundColor="bg-green-500"
                     type="submit"
                     idForm={idForm}
-                  />
+                  />}
+
                 </div>
               </div>
               {children}

@@ -5,7 +5,7 @@ export const contactSchema = Yup.object({
   lastName: Yup.string().max(60).required(),
   birth: Yup.string().optional().notRequired(),
   phone: Yup.string().notRequired(),
-  image: Yup.string().optional().notRequired(),
+  image: Yup.string().url().optional().notRequired(),
   email: Yup.string().email().optional().notRequired(),
   company: Yup.string().max(60).optional().notRequired(),
   address: Yup.string().max(60).optional().notRequired(),

@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { contactSchema } from '../../../../schemas/contactSchema'
 import { useAuth } from '../../../context/AuthContext'
 import { useState } from 'react'
-import removeEmptyFields from '../../../../utils/removeEmptyFields'
 import getContactService from '../../../../services/contactService'
 import { toast } from 'react-hot-toast'
 
@@ -17,8 +16,7 @@ export default function useEditContactForm (id: string | undefined, refetchConta
   const onSubmit: SubmitHandler<UpdateContactPayload> = async data => {
     setLoading(true)
     try {
-      const dataClean = removeEmptyFields(data)
-      await getContactService(token).update(id as string, dataClean as UpdateContactPayload)
+      await getContactService(token).update(id as string, data)
       toast.success('Updating contact')
       refetchContacts()
       closeModal()

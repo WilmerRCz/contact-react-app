@@ -37,7 +37,7 @@ function ContactCard ({ name, lastname, phone, email, birth, data, refecthContac
             <EditButton data={data} refecthContacts={refecthContacts}/>
             <DeleteButton data={data} refecthContacts={refecthContacts}/>
           </div>
-          <Modal open={open} closeModal={closeModal} title={'Contacto'}>
+          <Modal open={open} closeModal={closeModal} title={'Contacto'} dotShowSaveButton={true}>
             <ViewContact data={data}/>
           </Modal>
         </div>

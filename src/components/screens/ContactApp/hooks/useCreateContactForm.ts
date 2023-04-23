@@ -6,7 +6,6 @@ import { useAuth } from '../../../context/AuthContext'
 import { useState } from 'react'
 import getContactService from '../../../../services/contactService'
 import { toast } from 'react-hot-toast'
-import removeEmptyFields from '../../../../utils/removeEmptyFields'
 
 export default function useCreateContactForm (refetchContacts: () => void, closeModal: () => void) {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<CreateContactPayload>({
@@ -18,8 +17,7 @@ export default function useCreateContactForm (refetchContacts: () => void, close
   const handleFormSubmit = handleSubmit(async data => {
     setLoading(true)
     try {
-      const dataClean = removeEmptyFields(data)
-      await getContactService(token).create(dataClean as CreateContactPayload)
+      await getContactService(token).create(data)
       toast.success('Creating contact')
       refetchContacts()
       closeModal()
