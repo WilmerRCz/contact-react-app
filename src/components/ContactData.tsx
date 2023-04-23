@@ -15,8 +15,8 @@ function ContactData ({ name, lastname, phone, email, birth, onClick }: Props) {
           {name} {lastname}
         </li>
         <li className="text-xs font-light text-gray-300">🎂 {birth}</li>
-        <li className="text-sm text-gray-300">📱 {phone}</li>
-        <li className="text-sm text-gray-300">✉ {email}</li>
+        <li className="text-xs text-gray-300">📱 {phone}</li>
+        <li className="text-xs text-gray-300">✉ {email}</li>
       </ul>
     </div>
   )

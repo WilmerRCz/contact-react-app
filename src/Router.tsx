@@ -8,7 +8,7 @@ const BrowserRouter = createBrowserRouter([
   { path: '/login', element: <PublicOnlyRoute Component={Login}/> },
   { path: '/register', element: <PublicOnlyRoute Component={Register}/> },
   { path: '/app', element: <PrivateRoute Component={ContactApp}/> },
-  { path: '/', element: <NotFound/> }
+  { path: '/*', element: <NotFound/> }
 ])
 
 export default function Router () {

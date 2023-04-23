@@ -1,8 +1,20 @@
+import { Contact } from '../@types/Contact'
+import PredeterminedImageContact from './PredeterminedImageContact'
 
-function ImageContact () {
+interface Props {
+  data?: Contact
+}
+
+function ImageContact ({ data }: Props) {
   return (
-    <div className="bg-slate-400 rounded-full h-16 w-16 m-2 border-2 border-black">
-
+    <div className='w-16 h-16 overflow-hidden border-2 border-black rounded-full flex justify-center items-center'>
+      {data?.image
+        ? <img
+        className="h-full w-full object-cover"
+        src={`${data.image}`}
+        alt="imagen de contacto"
+      />
+        : <PredeterminedImageContact/>}
     </div>
   )
 }

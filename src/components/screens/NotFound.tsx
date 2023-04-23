@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import ButtonLayout from '../ButtonLayout'
 import Container from '../layout/Container'

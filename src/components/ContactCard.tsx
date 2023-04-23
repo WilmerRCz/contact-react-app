@@ -21,8 +21,8 @@ function ContactCard ({ name, lastname, phone, email, birth, data, refecthContac
   return (
     <div>
       <div className="bg-slate-700 h-full w-80 sm:w-96 rounded-xl p-2 flex items-center space-x-6">
-        <div className="w-20">
-          <ImageContact />
+        <div className="">
+          <ImageContact data={data}/>
         </div>
         <div className="flex items-center justify-between w-full">
           <ContactData
