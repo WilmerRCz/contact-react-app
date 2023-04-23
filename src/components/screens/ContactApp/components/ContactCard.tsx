@@ -1,11 +1,11 @@
 import ContactData from './ContactData'
 import DeleteButton from './ButtonDeleteContact'
-import EditButton from './ButtonEditContact'
 import ImageContact from './ImageContact'
-import { Contact } from '../@types/Contact'
-import useModal from '../hooks/useModal'
-import Modal from './Modal'
+import { Contact } from '../../../../@types/Contact'
+import useModal from '../../../../hooks/useModal'
 import ViewContact from './ViewContact'
+import EditButton from './ButtonEditContact'
+import Modal from './Modal'
 
 interface Props {
   name: string;

@@ -1,6 +1,6 @@
-import { Contact } from '../@types/Contact'
+import { Contact } from '../../../../@types/Contact'
 import ContactCard from './ContactCard'
-import NotContacts from './NotContacts'
+import NotContacts from '../../../NotContacts'
 
 interface Props {
   contact?: Contact[]

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BiLogOut } from 'react-icons/bi'
-import { useAuth } from './context/AuthContext'
+import { useAuth } from '../../../context/AuthContext'
 
 function ButtonLogout () {
   const { deleteToken } = useAuth()

@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonLayout from './ButtonLayout'
+import ButtonLayout from '../../../ButtonLayout'
 interface Props {
   open: boolean;
   closeModal: () => void;

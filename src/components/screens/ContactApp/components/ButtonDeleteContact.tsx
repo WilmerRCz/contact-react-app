@@ -1,6 +1,6 @@
 import { AiFillDelete } from 'react-icons/ai'
-import { Contact } from '../@types/Contact'
-import useRemoveContact from './screens/ContactApp/hooks/useRemoveContact'
+import { Contact } from '../../../../@types/Contact'
+import useRemoveContact from '../hooks/useRemoveContact'
 
 interface Props {
   data: Contact
