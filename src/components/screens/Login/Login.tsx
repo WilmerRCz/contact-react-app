@@ -26,7 +26,9 @@ function Login () {
         type="password"
         errorMessage={errors.password?.message}
       />
-      <ButtonLayout title='Sign In'/>
+      <div className='text-right'>
+      <ButtonLayout title='Sign In' extraClassName='border-teal-700 bg-teal-500'/>
+      </div>
       <div className='text-sm text-cyan-400 hover:text-cyan-300 transition'>
       <Link to={'/Register'} replace>
         Not account? Sign up for an account.

@@ -1,4 +1,4 @@
-import { AiFillDelete } from 'react-icons/ai'
+import { BiTrash } from 'react-icons/bi'
 import { Contact } from '../../../../@types/Contact'
 import useRemoveContact from '../hooks/useRemoveContact'
 
@@ -11,7 +11,7 @@ function DeleteButton ({ data, refecthContacts }:Props) {
   return (
     <div className="ml-auto">
       <button onClick={handleRemove}>
-        <AiFillDelete size={24} color={'#ef4444'}/>
+        <BiTrash size={24} className='text-red-500'/>
       </button>
     </div>
   )

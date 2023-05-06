@@ -3,7 +3,7 @@ import { IoMdContact } from 'react-icons/io'
 
 function PredeterminedImageContact () {
   return (
-    <IoMdContact size={96} color={'#94a3b8'} className='' />
+    <IoMdContact size={96} className='text-teal-500' />
   )
 }
 

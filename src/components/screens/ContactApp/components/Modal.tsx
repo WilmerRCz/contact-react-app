@@ -1,5 +1,6 @@
 import React from 'react'
 import ButtonLayout from '../../../ButtonLayout'
+import { CgClose } from 'react-icons/cg'
 interface Props {
   open: boolean;
   closeModal: () => void;
@@ -19,26 +20,19 @@ function Modal ({ open, closeModal, title, idForm, dotShowSaveButton, children }
                 <h1 className="font-bold text-2xl text-black dark:text-gray-300">
                   {title}
                 </h1>
-                <div className="flex gap-4">
-                  <ButtonLayout
-                    title="Cancelar"
-                    borderColor="border-red-700"
-                    backgroundColor="bg-red-500"
-                    onClick={closeModal}
-                  />
-                  {dotShowSaveButton
-                    ? null
-                    : <ButtonLayout
-                    title="Crear"
-                    borderColor="border-green-700"
-                    backgroundColor="bg-green-500"
-                    type="submit"
-                    idForm={idForm}
-                  />}
-
+                <div className="flex gap-8">
+                    <CgClose size={24} className='cursor-pointer text-gray-300 hover:opacity-80' onClick={closeModal}/>
                 </div>
               </div>
               {children}
+              {dotShowSaveButton
+                ? null
+                : <div className='text-right'><ButtonLayout
+                title="Crear"
+                extraClassName="border-green-700 bg-green-500"
+                type="submit"
+                idForm={idForm}
+              /></div>}
             </div>
           </div>
         </div>

@@ -47,7 +47,9 @@ function Register () {
         type="password"
         errorMessage={errors.passwordConfirm?.message}
       />
-      <ButtonLayout title='Sign Out'/>
+      <div className='text-right'>
+      <ButtonLayout title='Sign Up' extraClassName='border-teal-700 bg-teal-500'/>
+      </div>
       <div className='text-sm text-cyan-400 hover:text-cyan-300 transition'>
         <Link to={'/Login'} replace>
           Already have an account? Sign in.

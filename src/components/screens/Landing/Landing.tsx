@@ -11,7 +11,7 @@ function Landing () {
         My Contact App is a simple contact management app!
       </p>
       <Link to={'/login'} >
-        <ButtonLayout title='Login' borderColor='border-slate-800' backgroundColor='bg-slate-800' />
+        <ButtonLayout title='Login' extraClassName='border-teal-700 bg-teal-500' />
       </Link>
     </Container>
   )
